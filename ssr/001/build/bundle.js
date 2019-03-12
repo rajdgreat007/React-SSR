@@ -6840,15 +6840,28 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 
 
-var express = __webpack_require__(53);
-var React = __webpack_require__(15);
-var reactDOM = __webpack_require__(111);
-var Home = __webpack_require__(122).default;
+var _express = __webpack_require__(53);
 
-var app = express();
+var _express2 = _interopRequireDefault(_express);
+
+var _react = __webpack_require__(15);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _server = __webpack_require__(111);
+
+var _server2 = _interopRequireDefault(_server);
+
+var _home = __webpack_require__(122);
+
+var _home2 = _interopRequireDefault(_home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
 
 app.get('/', function (req, res) {
-    var content = reactDOM.renderToString(React.createElement(Home, null));
+    var content = _server2.default.renderToString(_react2.default.createElement(_home2.default, null));
     res.send(content);
 });
 
@@ -22607,19 +22620,27 @@ module.exports = camelize;
 "use strict";
 
 
-var React = __webpack_require__(15);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(15);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
-    return React.createElement(
+    return _react2.default.createElement(
         'h2',
-        null,
+        { onClick: function onClick() {
+                console.log('hello');
+            } },
         'I am home component'
     );
 };
 
-module.exports = {
-    default: Home
-};
+exports.default = Home;
 
 /***/ })
 /******/ ]);
