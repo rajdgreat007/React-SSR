@@ -1,7 +1,7 @@
-const express = require('express');
-const React = require('react');
-const reactDOM = require('react-dom/server');
-const Home = require('./client/home').default;
+import express from 'express';
+import React from 'react';
+import reactDOM from 'react-dom/server';
+import Home from './client/home';
 
 const app = express();
 

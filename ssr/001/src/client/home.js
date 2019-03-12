@@ -1,9 +1,7 @@
-const React = require('react');
+import React from 'react';
 
 const Home = () => {
-    return <h2>I am home component</h2>;
+    return <h2 onClick={()=>{console.log('hello')}}>I am home component</h2>;
 }
 
-module.exports = {
-    default: Home
-}
+export default Home;
